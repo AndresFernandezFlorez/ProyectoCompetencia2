@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito de Compras</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .producto {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .producto:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .producto__imagen {
+            text-align: center;
+        }
+
+        .producto__imagen img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .producto__texto {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .producto__precio {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton:hover {
+            background-color: #45a049;
+        }
+
+        .carrito {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .carrito__titulo {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .carrito__producto {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .carrito__producto span {
+            flex: 1;
+        }
+
+        .carrito__producto .carrito__producto-cantidad,
+        .carrito__producto .carrito__producto-precio {
+            margin-left: 10px;
+        }
+
+        .carrito__total {
+            margin-top: 10px;
+            text-align: right;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .productos {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Carrito de Compras</h2>
+        <div class="productos">
+            <div class="producto">
+                <div class="producto__imagen">
+                    <img src="img/pan10.jpg" alt="Imagen Producto">
+                </div>
+                <div class="producto__texto">
+                    <p class="producto__precio">$20.00</p>
+                    <p>Nombre Producto</p>
+                    <a class="boton" href="#">Agregar al Carrito</a>
+                </div>
+            </div>
+            <!-- Agrega más productos aquí -->
+        </div>
+        <div class="carrito">
+            <h3 class="carrito__titulo">Carrito</h3>
+            <div class="carrito__producto">
+                <span>Nombre Producto</span>
+                <span class="carrito__producto-cantidad">1</span>
+                <span class="carrito__producto-precio">$20.00</span>
+            </div>
+            <!-- Agrega más productos en el carrito aquí -->
+            <div class="carrito__total">Total: $20.00</div>
+            <a class="boton" href="#">Realizar Pago</a>
+        </div>
+    </div>
+</body>
+</html>
